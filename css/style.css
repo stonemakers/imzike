@@ -9,14 +9,26 @@ html{
   background: #F7F8FA;
 }
 
+.m{
+  font-weight: 400;
+}
+
 .btns{
   padding: 10px 40px;
-  border: 1px solid #efefef;
+  border: 1px solid #A9A9A9;
   border-radius: 20px;
   color: #5F5F5F;
   font-size: 10px;
   display: inline-block;
-  margin: 20px;
+  margin: 40px;
+  transition: all 0.2s linear;
+}
+
+.btns:hover{
+  border: 1px solid #29c276;
+  background: #29c276;
+  color: #fff;
+  opacity: .9;
 }
 .tc {
   text-align: center;
@@ -24,17 +36,36 @@ html{
 .cover{
   background: url('../assets/cover.png') no-repeat;
   width: 100%;
-  height: 600px;
+  background-size: cover;
+  height: 800px;
 }
 .container{
   margin: 0 auto;
   width: 900px;
 }
 
+
+
+.animation{
+-webkit-animation:flipInY 2s .2s ease both;
+}
+
+@-webkit-keyframes flipInY{
+0%{-webkit-transform:perspective(400px) rotateY(90deg);
+opacity:0}
+40%{-webkit-transform:perspective(400px) rotateY(-10deg)}
+70%{-webkit-transform:perspective(400px) rotateY(10deg)}
+100%{-webkit-transform:perspective(400px) rotateY(0deg);
+opacity:1}
+}
+
+.bgs{
+  background: #29c276;
+}
 .wrap-zl {
   display: flex;
   justify-content: space-around;
-  margin-top: -80px;
+  margin-top: -200px;
 }
 
 .wrap-zl li{
@@ -51,6 +82,13 @@ html{
   border-radius: 8px;
   position: relative;
   text-align: center;
+  transition: all 0.3s linear;
+}
+
+.wrap-zl li:hover{
+  transform: translateY(-20px);
+  box-shadow: none;
+  cursor: pointer;
 }
 
 .wrap-zl .tag{
@@ -127,13 +165,51 @@ html{
   align-items: center;
 }
 .main *{
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .main .btn{
   border: 1px solid #fff;
   color: #fff;
   padding: 10px 50px;
   border-radius: 20px;
+  transition: all 0.2s linear;
+}
+.main img{
+  width: 70px;
+}
+
+a{
+  transition: all 0.2s linear;
+  color:#fff;
+}
+
+#search{
+  width: 400px;
+  height: 25px;
+  font-size: 18px;
+  line-height: 30px;
+  border-radius: 30px;
+  border: 0;
+  color: #000;
+  padding: 10px 40px;
+  background: rgba(255,255,255,.8);
+  font-weight:200;
+}
+
+::-moz-placeholder { color: #000; }
+::-webkit-input-placeholder { color:#000; }
+:-ms-input-placeholder { color:#000; }
+
+a:hover{
+  color: #29c276;
+}
+
+.main .btn:hover{
+  border: 1px solid #29c276;
+  background: #29c276;
+  color: #fff;
+  opacity: .9;
+  
 }
 
 .panel{
@@ -162,7 +238,8 @@ html{
   display: flex;
   flex-wrap: wrap;
   width: 900px;
-  margin: 0 auto;
+  margin: 0 auto ;
+  padding-bottom: 40px;
 }
 
 .panel .group{
@@ -184,8 +261,9 @@ html{
 .panel .group .des{
   color: #A9A9A9;
   font-size: 12px;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 30px;
+  margin-bottom: 80px;
 }
 
 .panel .group .btn{
@@ -194,10 +272,15 @@ html{
   border-radius: 20px;
   color: #29c276;
   font-size: 10px;
-  font-weight: 200;
+  font-weight: 400;
   margin-top: 10px;
   margin-bottom: 80px;
   display: inline-block;
+}
+
+.panel .group .btn:hover{
+  background: #29c276;
+  color: #fff;
 }
 
 .wrap-des {
@@ -215,20 +298,25 @@ html{
 
 .wrap-des li{
   background: #fff;
-  padding: 30px 20px;
+  padding: 30px 20px 50px;
   border-radius: 5px;
   flex: 1;
   margin-left: 20px;
   text-align: center;
   width: 100px;
   height: 150px;
+  transition: all 0.3s linear;
+}
+
+.wrap-des li:hover{
+  box-shadow: 0px 2px 5px rgba(0,0,0,.07);
+  transform: translateY(-10px);
 }
 
 
 .wrap-des li .icon{
   width: 50px;
   height: 50px;
-  
   margin: 0 auto;
 }
 
@@ -237,6 +325,7 @@ html{
   font-weight: 400;
   color: #4E4E4E;
   line-height: 50px;
+  margin-top: 15px;
 }
 
 .wrap-des li .content{
@@ -265,4 +354,77 @@ footer a{
 }
 footer p{
   margin: 20px 0 10px 0;
+}
+
+.main-wrap{
+  width: 900px;
+  margin: 20px auto;
+  display: flex;
+}
+
+.main-wrap .navv{
+  border-right:1px solid #29c276;
+  width: 100px;
+  margin-right: 40px;
+}
+
+.main-wrap .navv li {
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.main-wrap .navv li a{
+  color: #666;
+}
+
+.main-wrap .navv li a:hover{
+  color: #29c276;
+}
+.main-wrap .body{
+  flex: 1;
+  position: relative;
+}
+
+.main-wrap .body div{
+  margin: 30px 0;
+}
+
+.main-wrap .body .title{
+  color: #29c276;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.main-wrap .body .title:before{
+  content: '&';
+  color:#29c276;
+  font-size: 10px;
+  margin-right: 10px;
+}
+
+.main-wrap .body h1{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+.main-wrap .body h1:after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #29c276;
+  border: 2px solid #fff;
+  left: 0;
+  margin-left: -47px;
+  margin-top: -30px;
+}
+
+.main-wrap .body p{
+  font-size: 14px;
+  color: #222;
+  line-height: 30px;
+  font-weight: 300;
 }

@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>YAOPAI</title>
+    <title>爱手写 | 发现手写乐趣</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="./placeholderTypewriter.js"></script>
   </head>
   <body>
     <header class="cover">
       <section class="container">
         <nav class="nav"> 
-          <h2 class="logo">爱手写</h2>
+          <h2 class="logo"><a href="#">爱手写</a></h2>
           <ul class="menu">
-            <li>关于我们</li>
-            <li>了解我们</li>
+            <li><a href="./pages/about.html">关于我们</a></li>
+            <li><a href="http://weibo.com/u/1605725360">新浪微博</a></li>
           </ul>
         </nav>
         <section class="main">
-          <img src="./assets/logo.png" alt="">
-          <h2 class="m">发现手写乐趣</h2>
-          <a href="#" class="btn">立即体验</a>
+          <img src="./assets/logo.png" class="animation" alt="">
+          <h2 class="m">发现·手写乐趣</h2>
+          <input type="text" name="search" id="search">
+          <!--<a href="#" class="btn">立即体验</a>-->
         </section>
       </section>
     </header>
@@ -43,18 +46,18 @@
             <div class="alb">
               <img src="./assets/images/22_06.png" alt="">
             </div>
-            <img src="./assets/avatar_1.png" alt="" class="avatar">
-            <p class="name">感性小爸爸</p><i></i>
-            <p class="sign">我爱手写只是像热爱空气一样，追求自己想要的。</p>
+            <img src="./assets/avatar_2.png" alt="" class="avatar">
+            <p class="name">Music_天天</p><i></i>
+            <p class="sign">喜欢音乐的、古板的、内敛的、在坚持的手写爱好者</p>
           </li>
           <li>
             <div class="tag">可爱风</div>
             <div class="alb">
               <img src="./assets/images/22_14.png" alt="">
             </div>
-            <img src="./assets/avatar_1.png" alt="" class="avatar">
-            <p class="name">感性小爸爸</p><i></i>
-            <p class="sign">我爱手写只是像热爱空气一样，追求自己想要的。</p>
+            <img src="./assets/avatar_2.png" alt="" class="avatar">
+            <p class="name">西瓜</p><i></i>
+            <p class="sign">喜欢音乐的、古板的、内敛的、在坚持的手写爱好者</p>
           </li>
         </ul>
       </section>
@@ -63,8 +66,8 @@
 
     <section class="panel">
       <div class="top">
-        <h1 class="title">开启手写新姿势</h1>
-        <h1 class="des">一般人我不告诉他~</h1>
+        <h1 class="title">写字全新技能</h1>
+        <h1 class="des">只需一步，关注公众号『我们爱手写』，Get所有~</h1>
       </div>
 
       <ul class="light">
@@ -72,25 +75,21 @@
           <img src="./assets/wrap_1.png" alt="">
           <h1 class="title">21天练字打卡</h1>
           <p class="des">每天给自己一点正能量</p>
-          <a href="#" class="btn">开启此技能</a>
         </li>
         <li class="group">
           <img src="./assets/wrap_1.png" alt="">
           <h1 class="title">21天练字打卡</h1>
           <p class="des">每天给自己一点正能量</p>
-          <a href="#" class="btn">开启此技能</a>
         </li>
         <li class="group">
           <img src="./assets/wrap_1.png" alt="">
           <h1 class="title">21天练字打卡</h1>
           <p class="des">每天给自己一点正能量</p>
-          <a href="#" class="btn">开启此技能</a>
         </li>
         <li class="group">
           <img src="./assets/wrap_1.png" alt="">
           <h1 class="title">21天练字打卡</h1>
           <p class="des">每天给自己一点正能量</p>
-          <a href="#" class="btn">开启此技能</a>
         </li>
       </ul>
     </section>
@@ -131,12 +130,23 @@
       <section class="body">
         <img src="./assets/qrcode.png" alt="">
         <p>
-          <a href="#">了解我们</a>
-          <a href="#">加入我们</a>
-          <a href="#">谈谈合作</a>
+          <a href="./pages/about.html">了解我们</a>
+          <a href="./pages/about.html">加入我们</a>
+          <a href="./pages/about.html">谈谈合作</a>
         </p>
         <p>郑州爱手写信息科技有限公司</p>
       </section>
     </footer>
+
+    <script>
+      var placeholderText = [
+        "去哪儿找好看的手写作品?",
+        "大神求教如何把名字写好看？", 
+        "如何做一款自己的字体？"
+      ];
+
+      $('#search').placeholderTypewriter({text: placeholderText, delay: '100'});
+    </script>
+    
   </body>
 </html>
