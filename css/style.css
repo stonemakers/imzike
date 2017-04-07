@@ -44,7 +44,9 @@ html{
   width: 900px;
 }
 
-
+#bg-wrap{
+  width: 550px;
+}
 
 .animation{
 -webkit-animation:flipInY 2s .2s ease both;
