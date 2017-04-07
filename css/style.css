@@ -11,6 +11,7 @@ html{
 
 .m{
   font-weight: 400;
+  padding-bottom: 30px;
 }
 
 .btns{
@@ -46,7 +47,7 @@ html{
 
 #bg-wrap{
   width: 550px;
-  
+
 }
 
 .animation{
