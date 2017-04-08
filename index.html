@@ -12,11 +12,13 @@
   </head>
   <body>
     <header class="cover">
+      
       <section class="container">
         <nav class="nav"> 
-          <h2 class="logo"><a href="#">爱手写</a></h2>
+          <h2 class="logo"><a href="http://imzike.com">爱手写</a></h2>
           <ul class="menu">
-            <li><a href="./pages/about.html">关于我们</a></li>
+            <li><a href="http://imzike.com/pages/about.html">了解我们</a></li>
+            <li><a href="http://imzike.com/pages/about.html">加入我们</a></li>
             <li><a href="http://weibo.com/u/1605725360">新浪微博</a></li>
           </ul>
         </nav>
@@ -35,11 +37,11 @@
           <li>
             <div class="tag">潇洒风</div>
             <div class="alb">
-              <img src="./assets/images/22_03.png" alt="">
+              <img src="./assets/images/22_15.png"  alt="">
             </div>
             <img src="./assets/avatar_1.png" alt="" class="avatar">
             <p class="name">感性小爸爸</p><i></i>
-            <p class="sign">我爱手写只是像热爱空气一样，追求自己想要的。</p>
+            <p class="sign">愿你岁月无波澜,与我余生共悲欢。</p>
           </li>
           <li>
             <div class="tag">硬派风</div>
@@ -55,13 +57,13 @@
             <div class="alb">
               <img src="./assets/images/22_14.png" alt="">
             </div>
-            <img src="./assets/avatar_2.png" alt="" class="avatar">
+            <img src="./assets/avatar_3.png" alt="" class="avatar">
             <p class="name">西瓜</p><i></i>
-            <p class="sign">喜欢音乐的、古板的、内敛的、在坚持的手写爱好者</p>
+            <p class="sign">人生若只如初见</p>
           </li>
         </ul>
       </section>
-      <a href="#" class="btns tc">想看更多个性手写体？</a>
+      <a class="btns tc" onclick="show()">想看更多个性手写体？</a>
     </section>
 
     <section class="panel">
@@ -73,23 +75,23 @@
       <ul class="light">
         <li class="group">
           <img src="./assets/wrap_1.png" alt="">
-          <h1 class="title">21天练字打卡</h1>
-          <p class="des">每天给自己一点正能量</p>
+          <h1 class="title">练字打卡</h1>
+          <p class="des">坚持打卡习得一手好字</p>
         </li>
         <li class="group">
-          <img src="./assets/wrap_1.png" alt="">
-          <h1 class="title">21天练字打卡</h1>
-          <p class="des">每天给自己一点正能量</p>
+          <img src="./assets/wrap_3.png" alt="">
+          <h1 class="title">好物集市</h1>
+          <p class="des">搜罗手写周边DIY的集市</p>
         </li>
         <li class="group">
-          <img src="./assets/wrap_1.png" alt="">
-          <h1 class="title">21天练字打卡</h1>
-          <p class="des">每天给自己一点正能量</p>
+          <img src="./assets/wrap_2.png" alt="">
+          <h1 class="title">每日叫早</h1>
+          <p class="des">每天早晨6点50的手写问候</p>
         </li>
         <li class="group">
-          <img src="./assets/wrap_1.png" alt="">
-          <h1 class="title">21天练字打卡</h1>
-          <p class="des">每天给自己一点正能量</p>
+          <img src="./assets/wrap_4.png" alt="">
+          <h1 class="title">免费求字</h1>
+          <p class="des">看到喜欢的字即刻下单让Ta帮写</p>
         </li>
       </ul>
     </section>
@@ -128,24 +130,36 @@
 
     <footer>
       <section class="body">
-        <img src="./assets/qrcode.png" alt="">
-        <p>
-          <a href="./pages/about.html">了解我们</a>
-          <a href="./pages/about.html">加入我们</a>
-          <a href="./pages/about.html">谈谈合作</a>
+        <img src="./assets/qrcode.jpg" alt="">
+        <p class="link">
+          <a href="http://imzike.com/pages/about.html">关于我们</a>
+          <a href="http://imzike.com/pages/about.html">团队介绍</a>
+          <a href="http://imzike.com/pages/about.html">大事记</a>
+          <a href="http://imzike.com/pages/about.html">加入我们</a>
+          <a href="http://imzike.com/pages/about.html">谈谈合作</a>
         </p>
-        <p>郑州爱手写信息科技有限公司</p>
+        <p class="pro">©2017 爱手写 豫ICP备16002315号-1</p>
       </section>
     </footer>
-
+    <div id="masks">
+      <img src="./assets/qrcode.jpg" alt="">
+      <p>扫一扫关注公众号查看</p>
+    </div>
     <script>
       var placeholderText = [
-        "去哪儿找好看的手写作品?",
-        "大神求教如何把名字写好看？", 
-        "如何做一款自己的字体？"
+        "微信公众号：我们爱手写",
+        "新浪微博：我们爱手写", 
+        "跟我们一起发现手写乐趣~"
       ];
 
       $('#search').placeholderTypewriter({text: placeholderText, delay: '100'});
+
+      function show(){
+        $('#masks').css('display','flex')
+        $('#masks').click(function(){
+          $('#masks').css('display','none')
+        })
+      }
     </script>
     
   </body>
