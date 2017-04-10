@@ -37,7 +37,7 @@
     </header>
 
     <section class="main-wrap">
-      <div class="navv">
+      <div class="navv" id="navv">
         <ul>
           <li><a href="#about">关于我们</a></li>
           <li><a href="#team">团队介绍</a></li>
@@ -45,7 +45,7 @@
           <li><a href="#contact">联系我们</a></li>
         </ul>
       </div>
-      <div class="body">
+      <div class="body" id="cn">
         <div id="about">
           <h1>关于我们 | About us</h1>
           <p>常有人在爱手写的logo前疑惑，它到底是个贝壳还是汉字符号呢？<br>
@@ -82,7 +82,7 @@
       </div>
     </section>
 
-    <footer>
+    <footer style="z-index: 999; position: relative;">
       <section class="body">
         <img src="../assets/qrcode.jpg" alt="">
         <p class="link">
@@ -95,5 +95,34 @@
         <p class="pro">©2017 爱手写 豫ICP备16002315号-1</p>
       </section>
     </footer>
+
+    <script>
+
+      function menuFixed(id){
+        var obj = document.getElementById(id);
+        var _getHeight = obj.offsetTop;
+        
+        window.onscroll = function(){
+        changePos(id,_getHeight);
+        }
+      }
+      function changePos(id,height){
+        var obj = document.getElementById(id);
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if(scrollTop < height){
+        obj.style.position = 'relative';
+        document.getElementById('cn').style.marginLeft='0px';
+        }else{
+        obj.style.position = 'fixed';
+        document.getElementById('cn').style.marginLeft='140px';
+        }
+      }
+
+
+      window.onload = function(){
+        document.getElementById('navv').style.height = document.getElementById('cn').offsetHeight + 'px';
+        menuFixed('navv');
+      }
+    </script>
   </body>
 </html>
