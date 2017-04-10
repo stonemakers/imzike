@@ -11,8 +11,11 @@ html{
 }
 
 .m{
-  font-weight: 400;
-  padding-bottom: 30px;
+  background: url('../assets/slogan.png') no-repeat;
+  width: 400px;
+  height: 100px;
+  background-size: contain;
+  margin-top: 30px;
 }
 
 .btns{
